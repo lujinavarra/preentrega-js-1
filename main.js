@@ -24,19 +24,19 @@ let colesterolTotal;
 do {
     colesterolTotal = parseInt(prompt("Ingresá tu valor de colesterol total"));
     if (isNaN(colesterolTotal)) alert("Ingresá un valor numérico válido para colesterol total");
-} while (isNaN(colesterolTotal));
+} while (isNaN(colesterolTotal) && colesterolTotal > 0);
 
 let hdl;
 do {
     hdl = parseInt(prompt("Ingresá tu valor de hdl"));
     if (isNaN(hdl)) alert("Ingresá un valor numérico válido para hdl");
-} while (isNaN(hdl));
+} while (isNaN(hdl) && hdl > 0);
 
 let trigliceridos;
 do {
     trigliceridos = parseInt(prompt("Ingresá tu valor de triglicéridos"));
     if (isNaN(trigliceridos)) alert("Ingresá un valor numérico válido para triglicéridos");
-} while (isNaN(trigliceridos));
+} while (isNaN(trigliceridos) && trigliceridos > 0);
 
 let ldl = ecuacionDeFriedewald(colesterolTotal, hdl, trigliceridos);
 mostrarResultadoValoracion(ldl);
